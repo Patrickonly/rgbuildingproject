@@ -1,5 +1,5 @@
 {
+  "framework": "tanstack-start",
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "devCommand": "npm run dev"
 }
