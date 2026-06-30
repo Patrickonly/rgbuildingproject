@@ -54,10 +54,10 @@ export function SiteHeader() {
             Login
           </Link>
           <Link
-            to="/login"
+            to="/register"
             className="text-sm font-semibold px-5 py-2.5 rounded-xl bg-[#2563eb] text-white hover:shadow-lg hover:shadow-blue-200 transition-all hover:-translate-y-0.5 flex items-center gap-2"
           >
-            Open Dashboard
+            Sign up
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
@@ -96,11 +96,11 @@ export function SiteHeader() {
                 Login
               </Link>
               <Link
-                to="/login"
+                to="/register"
                 onClick={() => setOpen(false)}
                 className="px-4 py-3 rounded-xl bg-[#2563eb] text-white text-center text-sm font-semibold"
               >
-                Dashboard
+                Sign up
               </Link>
             </div>
           </nav>
