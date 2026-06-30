@@ -1,10 +1,11 @@
 import { db, formatRole, type User } from "@/lib/pms-store";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
-  ArrowRight,
-  Building2,
-  Lock,
-  User as UserIcon
+    ArrowRight,
+    Building2,
+    ChevronLeft,
+    Lock,
+    User as UserIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -85,20 +86,28 @@ function LoginPage() {
       {/* ── Left Side ── */}
       <div className="flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-20 py-10">
         <div className="max-w-md w-full mx-auto">
-          {/* Logo */}
-          <div className="flex items-center gap-3 mb-10">
-            <div className="h-12 w-12 rounded-xl bg-[#2563eb] flex items-center justify-center text-white shadow-lg shadow-blue-200">
-              <Building2 className="h-6 w-6" />
-            </div>
-            <div>
-              <div
-                className="font-bold text-2xl text-[#0f172a]"
-                style={{ fontFamily: "Space Grotesk, sans-serif" }}
-              >
-                RG Market
+          {/* Back to landing and Logo */}
+          <div className="flex items-center justify-between mb-10">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-[#2563eb] transition-colors"
+            >
+              <ChevronLeft className="h-4 w-4" /> Back to home
+            </Link>
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-xl bg-[#2563eb] flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                <Building2 className="h-5 w-5" />
               </div>
-              <div className="text-xs text-slate-500 font-medium">
-                Property Management System
+              <div>
+                <div
+                  className="font-bold text-lg text-[#0f172a]"
+                  style={{ fontFamily: "Space Grotesk, sans-serif" }}
+                >
+                  RG Market
+                </div>
+                <div className="text-[10px] text-slate-500 font-medium">
+                  Property Management System
+                </div>
               </div>
             </div>
           </div>

@@ -1,21 +1,21 @@
 import { db, nextId, type Category, type Room, type Tenant, type User as UserModel } from "@/lib/pms-store";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
-  ArrowRight,
-  Briefcase,
-  Building2,
-  CheckCircle2,
-  ChevronLeft,
-  FileText,
-  Hash,
-  IdCard,
-  Layers,
-  Lock,
-  Mail,
-  Phone,
-  Store,
-  Upload,
-  User
+    ArrowRight,
+    Briefcase,
+    Building2,
+    CheckCircle2,
+    ChevronLeft,
+    FileText,
+    Hash,
+    IdCard,
+    Layers,
+    Lock,
+    Mail,
+    Phone,
+    Store,
+    Upload,
+    User
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
@@ -173,8 +173,22 @@ function RegisterPage() {
       {/* ── Left Side ── */}
       <div className="flex-[1.2] flex flex-col justify-center px-8 md:px-12 lg:px-16 py-10 overflow-y-auto">
         <div className="max-w-xl w-full mx-auto my-auto">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-10">
+          {/* Back to landing and Header */}
+          <div className="flex flex-col gap-4 mb-10">
+            <div className="flex items-center justify-between">
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-[#2563eb] transition-colors"
+              >
+                <ChevronLeft className="h-4 w-4" /> Back to home
+              </Link>
+              <div className="text-sm font-medium text-slate-500">
+                Already a tenant?{" "}
+                <Link to="/login" className="text-[#2563eb] font-bold hover:underline">
+                  Sign In
+                </Link>
+              </div>
+            </div>
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-xl bg-[#2563eb] flex items-center justify-center text-white shadow-lg shadow-blue-200">
                 <Building2 className="h-5 w-5" />
@@ -190,12 +204,6 @@ function RegisterPage() {
                   Tenant Portal
                 </div>
               </div>
-            </div>
-            <div className="text-sm font-medium text-slate-500">
-              Already a tenant?{" "}
-              <Link to="/login" className="text-[#2563eb] font-bold hover:underline">
-                Sign In
-              </Link>
             </div>
           </div>
 
