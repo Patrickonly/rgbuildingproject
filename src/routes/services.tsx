@@ -28,8 +28,9 @@ function Services() {
     <SiteLayout>
       <PageHero
         eyebrow="WHAT WE OFFER"
-        title={<>Services built for <span className="rg-gradient-text">real buildings</span>.</>}
+        title={<>Services built for <span className="text-blue-300">real buildings</span>.</>}
         subtitle="Every module is designed around how property managers actually operate in Kigali."
+        variant="blue"
       />
 
       <section className="max-w-7xl mx-auto px-5 lg:px-8 py-20 grid md:grid-cols-2 lg:grid-cols-3 gap-5">

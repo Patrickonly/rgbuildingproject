@@ -39,8 +39,9 @@ function Contact() {
     <SiteLayout>
       <PageHero
         eyebrow="GET IN TOUCH"
-        title={<>Let's talk about your <span className="rg-gradient-text">building</span>.</>}
+        title={<>Let's talk about your <span className="text-blue-300">building</span>.</>}
         subtitle="We'd love to hear from property owners, managers and partners."
+        variant="blue"
       />
 
       <section className="max-w-7xl mx-auto px-5 lg:px-8 py-20 grid lg:grid-cols-3 gap-8">

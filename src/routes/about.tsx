@@ -19,8 +19,9 @@ function About() {
     <SiteLayout>
       <PageHero
         eyebrow="ABOUT US"
-        title={<>Building smarter commercial spaces in <span className="rg-gradient-text">Kigali</span>.</>}
+        title={<>Building smarter commercial spaces in <span className="text-blue-300">Kigali</span>.</>}
         subtitle="RG Market PMS is the digital backbone of our B+G+5 mixed-use complex — and the same system is ready for any modern building."
+        variant="blue"
       />
 
       <section className="max-w-7xl mx-auto px-5 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">

@@ -213,24 +213,41 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  variant = "light",
 }: {
   eyebrow: string;
   title: ReactNode;
   subtitle: string;
+  variant?: "light" | "blue";
 }) {
+  const isBlue = variant === "blue";
+  
   return (
-    <section className="relative overflow-hidden border-b border-slate-100">
-      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl animate-rg-blob" />
-      <div
-        className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-cyan-200/40 blur-3xl animate-rg-blob"
-        style={{ animationDelay: "3s" }}
-      />
+    <section className={`relative overflow-hidden border-b ${isBlue ? "bg-[#2563eb] border-transparent" : "bg-white border-slate-100"}`}>
+      {isBlue && (
+        <>
+          <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-white/10 blur-3xl animate-rg-blob" />
+          <div
+            className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-blue-400/20 blur-3xl animate-rg-blob"
+            style={{ animationDelay: "3s" }}
+          />
+        </>
+      )}
+      {!isBlue && (
+        <>
+          <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl animate-rg-blob" />
+          <div
+            className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-cyan-200/40 blur-3xl animate-rg-blob"
+            style={{ animationDelay: "3s" }}
+          />
+        </>
+      )}
       <div className="relative max-w-5xl mx-auto px-5 lg:px-8 py-20 lg:py-28 text-center">
-        <span className="inline-block text-xs font-bold tracking-[0.2em] text-[#2563eb] bg-blue-50 px-3 py-1.5 rounded-full animate-rg-fade-in">
+        <span className={`inline-block text-xs font-bold tracking-[0.2em] px-3 py-1.5 rounded-full animate-rg-fade-in ${isBlue ? "bg-white/10 text-white" : "bg-blue-50 text-[#2563eb]"}`}>
           {eyebrow}
         </span>
         <h1
-          className="mt-6 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0f172a] animate-rg-fade-in"
+          className={`mt-6 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight animate-rg-fade-in ${isBlue ? "text-white" : "text-[#0f172a]"}`}
           style={{
             fontFamily: "Space Grotesk, sans-serif",
             animationDelay: "0.1s",
@@ -239,7 +256,7 @@ export function PageHero({
           {title}
         </h1>
         <p
-          className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto animate-rg-fade-in"
+          className={`mt-6 text-lg max-w-2xl mx-auto animate-rg-fade-in ${isBlue ? "text-blue-100" : "text-slate-600"}`}
           style={{ animationDelay: "0.2s" }}
         >
           {subtitle}

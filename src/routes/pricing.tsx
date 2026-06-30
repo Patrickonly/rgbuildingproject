@@ -47,8 +47,9 @@ function Pricing() {
     <SiteLayout>
       <PageHero
         eyebrow="PRICING"
-        title={<>Simple plans. <span className="rg-gradient-text">No surprises.</span></>}
+        title={<>Simple plans. <span className="text-blue-300">No surprises.</span></>}
         subtitle="Pick the plan that fits your building. Cancel any time."
+        variant="blue"
       />
 
       <section className="max-w-7xl mx-auto px-5 lg:px-8 py-20 grid md:grid-cols-3 gap-6">

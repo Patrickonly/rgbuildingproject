@@ -42,8 +42,9 @@ function Features() {
     <SiteLayout>
       <PageHero
         eyebrow="ALL FEATURES"
-        title={<>Every module. <span className="rg-gradient-text">One dashboard.</span></>}
+        title={<>Every module. <span className="text-blue-300">One dashboard.</span></>}
         subtitle="A complete look at the four pillars that power RG Market PMS."
+        variant="blue"
       />
 
       <section className="max-w-7xl mx-auto px-5 lg:px-8 py-20 grid md:grid-cols-2 gap-6">
